@@ -37,7 +37,7 @@ def dataclass(clz):
   Returns:
     The new class.
   """
-  data_clz = dataclasses.dataclass(frozen=True)(clz)
+  data_clz = dataclasses.dataclass(frozen=False)(clz)
   meta_fields = []
   data_fields = []
   for name, field_info in data_clz.__dataclass_fields__.items():
